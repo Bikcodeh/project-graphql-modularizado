@@ -1,25 +1,3 @@
-"Consultas de la información de los estudiantes y cursos. Solo lectura"
-type Query {
-    "Lista de los estudiantes de la academia"
-    estudiantes: [Estudiante!]!
-    "Información del estudiante de la academia seleccionado por ID"
-    estudiante(id: ID!): Estudiante!
-    "Lista de los cursos de la academia"
-    cursos: [Curso!]!
-    "Información del curso de la academia seleccionado por ID"
-    curso(curso: ID!): Curso!
-}
-
-"Operaciones para añadir, editar o eliminar información"
-type Mutation {
-    "Opción para añadir la información de un nuevo curso"
-    cursoNuevo(curso: CursoInput!): Curso!
-    "Opción para modificar / actualizar la información de un curso seleccionado"
-    modificarCurso(curso: CursoInput!) : Curso!
-    "Opción para eliminar / borrar la información de un curso seleccionado mediante el ID"
-    eliminarCurso(id: ID!): Curso!
-}
-
 """
 Información de entrada para gestionar los datos de un curso, como puede ser añadir 
 y/o modificar los datos de un curso
